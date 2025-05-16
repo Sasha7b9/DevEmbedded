@@ -1,0 +1,6 @@
+Component: Arm Compiler for Embedded 6.21
+Tool: armar [5ec1ef00]
+Tool: armasm [5ec1f200]
+Tool: armclang [5ec1fd00]
+Tool: armlink [5ec1fa00]
+Tool: fromelf [5ec1f200]

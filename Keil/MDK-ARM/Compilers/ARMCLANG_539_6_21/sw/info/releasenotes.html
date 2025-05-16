@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+ <html><head><title>Release notes for Arm Compiler for Embedded 6.21</title> <meta charset="utf-8"/> <style type="text/css">body { font-family: times new roman, serif; margin: 20px; }
+h1 { font-size: xx-large; font-weight: bold; color: #0091BD; text-align: center; }
+h2 { color: #0091BD; font-size: 24px; }
+h3 { color: #0091BD; font-size: 20px; }
+h4 { color: #0091BD; font-size: 16px; }
+h5 { color: #0091BD; font-size: 14px; font-style: italic; }
+dt { font-weight: bold; }
+p { color: black; }
+.builddata { color: #0091BD; text-align: center; }
+.bookref { font-style: italic; }
+.guiref { font-weight: bold; }
+table, th, td { border: 1px solid #0091BD; border-collapse:collapse; padding-left:10px; padding-right:10px; font-size:0.9em; }
+th { background-color:#0091BD; color: white; text-align: left; }
+.toc {
+  list-style-type: none;
+}
+.tab { margin-left: 40px; }
+</style> </head><body><img alt="Arm Logo" src="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAIMAAAAqCAYAAACQjuhAAAAACXBIWXMAABcRAAAXEQHKJvM/AAAE
+BElEQVR42u2c23GjMBSG/zD7vpRACbiCkKGAdSoIVCC7AuwKbFVgbwX2FsCEVBC2gng7IBXsPkis
+GcLlSGAMtv4Zv3iMLkefjs4RkgEjIyOjsh60n+SxA8AD8AjAlZ+yUgAJgF9gflJRhtdSSwbmp8S2
+OI2/KdbPYxtAAOCH7INau3XqFM/MC3U6NXVyMP9E7PNc2t8DYFeUl8o+HC8DgxhAJhuiohOANZi/
+L5T1t+WZBMx/IrRpBSBqGZiHwoDsKoxX3wYg/DJAanV6ADY1E6ZKewBLMD+rgSCSMKvYftkGhaXk
+CXh8APCqAQLkTNiBx69yZg4vHm8AHBRAgBzArEOdC2kzV+GpAMA7eOyWyhLfq4GQ2/4AHu+6wyBm
+07smBGV5AIYHQhhiofHksXKG0uHbaLbYkXZyCyDsFEH+ClkDEBahQ4HGbKLMtteB/UKg+dy6Q52L
+jm22pTfNQejHDgJSRRj6bUQVEGPXkRTMXVbuBcZgURW8Ww0guBcEYSriN9y3iAaDWM8PGhVkMvrO
+P6cJGyutTSu7lnu2Tx/KNO3tyczkv741rHWOQsF7mR+nNalQINNRe0SDLfYRxOAUg9sX2fe+vcJR
+pnen0qSLNGOLTJa3r0j9d8TxmwPY1sNwzmOp+WvYOINE51fg8VY2cn5lCDIAzzVtTmRbgy9G7qaw
+sjyRpSzB408Fm+d2f6qMZ5ifgMczAB+EyfdYhMHqEHWnAGZkV8r8DMx/ll7kmiA8tba5XxCOreUx
+f6Xo4p8bA9scMsUgvgqGF6JRQ638m/mhdJnX0Jq0vd2vlmRoqEsyrQ+U8px6GEQG4Qxg1BBddvV0
+vQLztyNOTd+Iv/tJ9sSKQapVEVC0r1ddjSoaygcfmOH1W3EJo9gu6bXMwpa3VRFQ9EMmLQMZUm9X
+gCFRmCCU36YXgNGug8EZbIYJ9znk+j3lPQ8176EpdRj6DcCSWzHkLci68uB9DtbT4bMIHbc+KRiM
+1ANlA8MdreN3u0z0LccMwXRhcI3J7geGtoDHLr/27KhHMwTjhYGyhvfz1lG8vvXMEIwXBsouHeup
+7rkx/7hhoOwjOPJsZFevEBnzjxkGsTFDWSo2HY+6RyaTmEY2QXmbaEP37oPwKgtj+mnAsAdtH9+V
+QDgKIKxgTlxPCAa1swYuxDWwVSMUPA7A4w8TJ4xbdaejtzifEqYsGRGACDzOb/7+AfBdwmLSx0nD
+wPwMPA6hfgWu7mq+0URjhhyIBOKsotHdwyCA2KPbxVOjm4FBALG6gIfIjNeZIgxnDzFDPyd3ThAX
+WfbG/FOEQQCRgvkzOaNPmt5gDXELKzWmH5+6/MFX8c+l3AYAEogLrsepHQMzMOjD4ZT2JVIz+EZG
+E9U/yX9anPUqLjMAAAAASUVORK5CYII=
+"/><div><h1>Release notes for Arm Compiler for Embedded 6.21</h1>
+<p></p><a name="head_link_6"></a><h2>Table of Contents</h2><ol class="toc"><li><a href="#head_link_6">1 Introduction</a><ol class="toc"><li><a href="#head_link_5">1.1 Arm Compiler for Embedded 6.21 Overview</a></li><li><a href="#head_link_4">1.2 What's Supported in Arm Compiler for Embedded 6.21?</a></li></ol></li><li><a href="#head_link_3">2 Installation and integration into IDEs</a></li><li><a href="#head_link_2">3 Feedback and Support</a></li><li><a href="#head_link_1">4 Changes in Arm Compiler for Embedded 6.21</a></li></ol><h2>1 Introduction</h2><p><a href="https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded">Arm Compiler for Embedded</a> is the most advanced embedded C/C++ compilation toolchain from Arm for the development of bare-metal software, firmware, and Real-Time Operating System (RTOS) applications. The toolchain is compatible with the following Arm Integrated Development Environments (IDEs):</p><ul><li>Arm Development Studio</li><li>Keil MDK 5</li><li>Keil Studio for VS Code</li></ul><p>Arm Compiler for Embedded provides the earliest, most complete, and most accurate support for the latest architectural features and extensions of the Arm architecture. It supports all the latest Arm processors, including those in development. Through powerful optimization techniques and optimized libraries, Arm Compiler for Embedded enables embedded system developers to meet challenging performance goals and memory constraints.</p><p>Arm Compiler for Embedded is used by leading companies in a wide variety of industries, including automotive, consumer electronics, industrial, medical, networking, railway, storage, and telecommunications. If your project has long-term maintenance requirements or functional safety requirements (such as EN 50128, IEC 61508, IEC 62304, or ISO 26262), Arm strongly recommends that you consider a <a href="https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded%20FuSa">LTS and qualified version</a> of Arm Compiler for Embedded FuSa instead of this release.</p><p>Arm Compiler for Embedded 6.21 is the latest release as of October 2023 and supersedes every previous release.</p><p>The key highlights of this release include:</p><ul><li>Beta support for the Armv9.5-A architecture for AArch64 state</li><li>Early support for 2023 extensions for A-profile architectures</li><li>Support for the following processors:<ul><li>Cortex-X4</li><li>Cortex-A720</li><li>Cortex-A520</li></ul></li><li>Support for execute-only memory (XOM) regions when building for an Armv6-M target</li><li>Support for mitigations for the following security vulnerabilities:<ul><li>PACMAN</li><li>Straight-Line Speculation (SLS)</li></ul></li></ul><p>Contact your sales representative or visit <a href="https://developer.arm.com/buy-arm-products">https://developer.arm.com/buy-arm-products</a> to enquire about Arm Compiler for Embedded or an Arm IDE.</p><a name="head_link_5"></a><h3>1.1 Arm Compiler for Embedded 6.21 Overview</h3><p>Arm Compiler for Embedded 6.21 consists of:</p><ul><li>Toolchain components:<ul><li><strong>armclang:</strong> Compiler and integrated assembler based on LLVM and Clang technology</li><li><strong>armar:</strong> Archiver which enables sets of ELF object files to be collected together</li><li><strong>armlink:</strong> Linker that combines objects and libraries to produce an executable</li><li><strong>fromelf:</strong> Image conversion utility and dissembler</li><li><strong>armasm:</strong> Deprecated legacy assembler for armasm-syntax assembly code for older Arm architectures only. Use the armclang integrated assembler for all new assembly files.</li><li><strong>Arm C Libraries:</strong> Runtime support libraries for embedded systems</li><li><strong>Arm C++ Libraries:</strong> Libraries based on the LLVM libc++ project</li></ul></li><li><a href="https://developer.arm.com/documentation/ka005061/latest">User documentation</a>:<ul><li><strong>User Guide:</strong> Provides examples and guides to help you use the toolchain</li><li><strong>Reference Guide:</strong> Provides information to help you configure the toolchain</li><li><strong>Arm C and C++ Libraries and Floating-Point Support User Guide:</strong> Provides information about the Arm libraries and floating-point support</li><li><strong>Errors and Warnings Reference Guide:</strong> Provides a list of the errors and warnings that tools in Arm Compiler for Embedded can report</li><li><strong>Migration and Compatibility Guide:</strong> Provides information to help you migrate from Arm Compiler 5 to Arm Compiler for Embedded</li></ul></li><li><a href="https://developer.arm.com/documentation/109363/6-21/?lang=en">Release notes</a></li></ul><a name="head_link_4"></a><h3>1.2 What's Supported in Arm Compiler for Embedded 6.21?</h3><p>Subject to your license terms, Arm Compiler for Embedded 6.21 can be used to build for the following Arm Architectures and Processors:</p><div><table style="width: 75.10504%"><colgroup> <col style="width: 21.708683%"/> <col style="width: 26.890757%"/> <col style="width: 23.809525%"/> <col style="width: 12.044818%"/> <col style="width: 15.546219%"/> </colgroup><tbody><tr><th style="text-align: center"><p style="color: rgb(255, 255, 255)">Architecture</p></th><th style="text-align: center"><p style="color: rgb(255, 255, 255)">Cortex (Standard)</p></th><th style="text-align: center"><p style="color: rgb(255, 255, 255)">Cortex (Automotive Enhanced)</p></th><th style="text-align: center"><p style="color: rgb(255, 255, 255)">Neoverse</p></th><th style="text-align: center"><p style="color: rgb(255, 255, 255)">Other</p></th></tr><tr><td><p>Armv9.5‑A AArch64 [BETA]</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td></tr><tr><td>Armv9-A up to Armv9.4-A</td><td><p>X4, X3, X2</p><p>A720, A715, A710</p><p>A520, A510</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td><p>V2</p><p>N2</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td></tr><tr><td>Armv8‑A up to Armv8.9‑A</td><td><p>X1</p><p>A78C, A78, A77, A76, A75, A73, A72</p><p>A65</p><p>A57, A55, A53</p><p>A35, A34, A32</p></td><td><p>A78AE, A76AE</p><p>A65AE</p></td><td><p>V1</p><p>N1</p><p>E1</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td></tr><tr><td><p>Armv7‑A</p></td><td><p>A17, A15, A12</p><p>A9, A8, A7, A5</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td></tr><tr><td><p>Armv8‑R AArch64<br/>(implementations with<br/>hardware floating-point only)</p></td><td><p>R82</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td></tr><tr><td><p>Armv8‑R</p></td><td><p>R52+, R52</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td></tr><tr><td><p>Armv7‑R</p></td><td><p>R8, R7, R5, R4F, R4</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td></tr><tr><td><p>Armv8‑M up to Armv8.1‑M</p></td><td><p>M85, M55</p><p>M35P, M33</p><p>M23</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td><p>STAR‑MC1</p></td></tr><tr><td><p>Armv7‑M</p></td><td><p>M7, M4, M3</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td><p>SecurCore SC300</p></td></tr><tr><td><p>Armv6‑M</p></td><td><p>M1, M0, M0+</p></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td style="background-color: rgb(204, 243, 255)"><br/></td><td><p>SecurCore SC000</p></td></tr></tbody></table></div><p>For more information, refer to the following:</p><ul><li>The <a href="https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio">Arm Development Studio</a> product page.</li><li>The <a href="https://developer.arm.com/Tools%20and%20Software/Keil%20MDK">Keil MDK 5</a> product page.</li><li>The <a href="https://www.keil.arm.com/">Keil Studio for VS Code</a> product page.</li><li>The <em>Support level definitions</em> section of the <em>Arm Compiler for Embedded </em><em>User Guide</em>.</li></ul><a name="head_link_3"></a><h2>2 Installation and integration into IDEs</h2><p>The <a href="https://developer.arm.com/documentation/ka005198/latest">Arm Compiler for Embedded 6.21 toolchain download packages available via Arm Product Download Hub (PDH)</a> are intended to be used in the following environments as of October 2023<sup>✝</sup>:</p><div><table><colgroup> <col/> <col/> <col/> <col/> </colgroup><tbody><tr><th style="text-align: center"><p style="color: rgb(255, 255, 255)">Host architecture</p></th><th style="text-align: center"><p style="color: rgb(255, 255, 255)">Host operating system</p></th><th colspan="1" style="text-align: center"><p style="color: rgb(255, 255, 255)">Toolchain download package</p></th><th style="text-align: center"><p style="color: rgb(255, 255, 255)">Host environment</p></th></tr><tr><td rowspan="3"><p>x86_64</p></td><td><p>Red Hat Enterprise Linux 9</p><p>Red Hat Enterprise Linux 8</p><p>Red Hat Enterprise Linux 7</p><p>Ubuntu 22.04 LTS</p><p>Ubuntu 20.04 LTS</p></td><td colspan="1"><p>x86_64 Linux</p></td><td><p>Standalone installation</p><p>Integrated into Arm Development Studio</p></td></tr><tr><td rowspan="2"><p>Windows Server 2022</p><p>Windows Server 2019</p><p>Windows 11</p><p>Windows 10</p></td><td colspan="1"><p>x86_64 Windows</p></td><td><p>Standalone installation</p><p>Integrated into Arm Development Studio</p></td></tr><tr><td rowspan="1"><p>for Keil® MDK</p></td><td rowspan="1"><p>Integrated into Keil MDK 5</p></td></tr><tr><td><p>AArch64</p></td><td><p>Ubuntu 20.04 LTS</p></td><td><p>AArch64 Linux</p></td><td><p>Standalone installation</p></td></tr></tbody></table></div><p><sup>✝</sup>Arm reserves the right to add additional environments for this release.</p><p>The following restrictions apply:</p><ul><li>The toolchain is not intended for use on x86_32 Windows host platforms.</li><li>The minimum required version of <a href="https://www.gnu.org/software/libc/">glibc</a> for Linux host platforms is 2.15.</li><li>The toolchain must not be installed directly into an Arm Development Studio installation directory.</li><li>Use with a Keil MDK 5 license is only permitted on x86_64 Windows host platforms.</li><li>Use with Keil MDK 5 requires installation into the <code>ARM</code> sub-directory of the Keil MDK 5 installation directory. For example, <code>C:\Keil_v5\ARM\ARMCompiler6.21</code>.</li></ul><p>For more information, refer to the following:</p><ul><li>The <em>Installing Arm Compiler for Embedded</em> section of the <em>Arm Compiler for Embedded User Guide</em> for toolchain installation instructions.</li><li>The <em>Register a compiler toolchain</em> section of the <em>Arm Development Studio Getting Started Guide</em> for instructions to integrate the toolchain into Arm Development Studio.</li><li>The <em>Manage Arm Compiler Versions</em> section of the <em>µVision User's Guide</em> for instructions to integrate the toolchain into Keil MDK 5.</li><li>The <em>Arm Keil Studio Visual Studio Code Extensions User Guide</em> for instructions to integrate the toolchain into <a href="https://www.keil.arm.com/">Keil Studio for VS Code</a>.</li><li>The <em><a href="https://developer.arm.com/documentation/ka004977/latest">Product and toolkit configuration for FlexNet Publisher (FNP) licenses</a></em> article for instructions to configure the toolchain to use a FlexNet Publisher (FNP) license. If you are using a FNP floating license, use the latest version of the <a href="https://developer.arm.com/downloads/-/download-flexnet-publisher">license server software</a>.</li><li>The <em><a href="https://lm.arm.com">User-based Licensing User Guide</a></em> for instructions to configure the toolchain to use a User-based License (UBL).</li></ul><a name="head_link_2"></a><h2>3 Feedback and Support</h2><p>Your feedback is important to us, and you are welcome to send us defect reports and suggestions for improvement on any aspect of the product. Defect fixes and enhancements will be considered for a future release according to the <a href="https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded">Arm Compiler for Embedded maintenance policy</a>. For projects that have long-term maintenance or functional safety requirements, please consider using a <a href="https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded%20FuSa">LTS and qualified version</a> of Arm Compiler for Embedded FuSa.</p><p>Please contact your supplier or <a href="https://developer.arm.com/support">open a case</a> with feedback or support issues, using your work or academic email address if possible. Where appropriate, please provide the following information:</p><ul><li><code>--vsn</code> output from the tool.</li><li>The complete content of any error message that the tool produces.</li><li>Preprocessed source code, other files, and command-line options necessary to reproduce the issue. For information on how to preprocess source code, refer to the <em>-E</em> section of the <em>Reference Guide</em>.</li></ul><a name="head_link_1"></a><h2>4 Changes in Arm Compiler for Embedded 6.21</h2><p>Below is a summary of enhancements and defect fixes in Arm Compiler for Embedded 6.21. For more information about the scope of this section, refer to the <em><a href="https://developer.arm.com/documentation/ka005052/latest">Does Arm document all known issues that affect each Arm Compiler release?</a></em> article.</p><p>Arm Compiler for Embedded 6.21 is not a Long-Term Support (LTS) release. Further defect fixes and enhancements will be considered for a future release according to the <a href="https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded">Arm Compiler for Embedded maintenance policy</a>.</p><p>The information below may include technical inaccuracies or typographical errors. Each itemized change is accompanied by a unique SDCOMP-&lt;n&gt; identifier. If you need to contact Arm about a specific issue within these release notes, please quote the appropriate identifier.</p><p>Changes are listed since the previous feature release, Arm Compiler for Embedded 6.20.</p><p></p><h4>General changes in Arm Compiler for Embedded 6.21</h4><p><p>
+</p><ul>
+<li><p>[SDCOMP-64207]  Beta support has been added for the Armv9.5-A architecture for AArch64 state. To target Armv9.5-A and AArch64 state, use the following <tt>armclang</tt> options:
+</p><ul>
+<li><tt>--target=aarch64-arm-none-eabi</tt> <tt>-march=armv9.5-a</tt></li>
+</ul>
+<p>For more information, refer to the <em>-march</em> section of the <em>Reference Guide</em>.</p><p></p></li>
+<li><p>[SDCOMP-64061]  The following linking models have been deprecated:
+</p><ul>
+<li>Base Platform</li>
+<li>Base Platform Application Binary Interface (BPABI)</li>
+</ul>
+<p>Consequently, the following linker options have been deprecated:</p>
+<ul>
+<li><tt>--base_platform</tt></li>
+<li><tt>--bpabi</tt></li>
+<li><tt>--dll</tt></li>
+<li><tt>--pltgot=&lt;type&gt;</tt></li>
+<li><tt>--pltgot_opts=&lt;mode&gt;</tt></li>
+</ul>
+<p>For information about the Base Platform and BPABI linking models, refer to the following sections of the <em>Reference Guide</em>:</p>
+<ul>
+<li><em>Base Platform linking model overview</em></li>
+<li><em>Base Platform Application Binary Interface (BPABI) linking model overview</em></li>
+</ul>
+<p></p></li>
+<li><p>[SDCOMP-64057]  Support for the following A-profile architecture features for AArch64 state has been changed:
+</p><div>
+<table><tbody>
+<tr>
+<th>Feature identifier</th>
+<th>Feature description</th>
+<th><tt>-march</tt> / <tt>-mcpu</tt> <tt>+&lt;feature&gt;</tt> option(s)</th>
+<th>Previous support level</th>
+<th>New support level</th>
+</tr>
+<tr>
+<td> FEAT_ATS1A </td>
+<td> Address translation enhancement for Armv8.9-A and Armv9.4-A </td>
+<td> - </td>
+<td> Unsupported </td>
+<td> Supported </td>
+</tr>
+<tr>
+<td>FEAT_CPA</td>
+<td>Checked Pointer Arithmetic</td>
+<td><tt>cpa</tt></td>
+<td>Unsupported</td>
+<td>Alpha</td>
+</tr>
+<tr>
+<td>FEAT_E3DSE</td>
+<td>Delegated SError exceptions for EL3</td>
+<td>-</td>
+<td>Unsupported</td>
+<td>Beta</td>
+</tr>
+<tr>
+<td>FEAT_FAMINMAX</td>
+<td>Maximum and minimum absolute value instructions</td>
+<td><tt>fp8</tt></td>
+<td>Unsupported</td>
+<td>Alpha</td>
+</tr>
+<tr>
+<td>FEAT_FGWTE3</td>
+<td>Fine Grained Write Trap EL3</td>
+<td>-</td>
+<td>Unsupported</td>
+<td>Beta</td>
+</tr>
+<tr>
+<td>FEAT_FP8, FEAT_FP8DOT4, FEAT_FP8FMA, FEAT_FPMR</td>
+<td>Arm FP8 formats E5M2 and E4M3, and FP8 instructions</td>
+<td><tt>fp8</tt></td>
+<td>Unsupported</td>
+<td>Alpha</td>
+</tr>
+<tr>
+<td>FEAT_HACDBS</td>
+<td>Hardware accelerator for cleaning Dirty state</td>
+<td>-</td>
+<td>Unsupported</td>
+<td>Beta</td>
+</tr>
+<tr>
+<td>FEAT_HDBSS</td>
+<td>Hardware Dirty state tracking Structure</td>
+<td>-</td>
+<td>Unsupported</td>
+<td>Beta</td>
+</tr>
+<tr>
+<td>FEAT_LUT</td>
+<td>Lookup table instructions</td>
+<td><tt>fp8</tt></td>
+<td>Unsupported</td>
+<td>Alpha</td>
+</tr>
+<tr>
+<td>FEAT_PAuth_LR</td>
+<td>PAC enhancement to use the PC as a second diversifier for return address signing</td>
+<td><tt>pauth-lr</tt></td>
+<td>Unsupported</td>
+<td>Beta</td>
+</tr>
+<tr>
+<td>FEAT_SME_F8F16, FEAT_SME_F8F32</td>
+<td>SME2 FP8 instructions</td>
+<td><tt>fp8</tt> and <tt>sme2p1</tt></td>
+<td>Unsupported</td>
+<td>Alpha</td>
+</tr>
+<tr>
+<td>FEAT_SME_LUTv2</td>
+<td>Additional SME2 lookup table instructions</td>
+<td><tt>fp8</tt> and <tt>sme2p1</tt></td>
+<td>Unsupported</td>
+<td>Alpha</td>
+</tr>
+<tr>
+<td>FEAT_STEP2</td>
+<td>Software Step enhancement</td>
+<td>-</td>
+<td>Unsupported</td>
+<td>Beta</td>
+</tr>
+<tr>
+<td>FEAT_TLBIW</td>
+<td>TLBI VMALL for Dirty state</td>
+<td><tt>tlbiw</tt></td>
+<td>Unsupported</td>
+<td>Beta</td>
+</tr>
+</tbody></table>
+</div>
+<p>When compiling with <tt>-march=&lt;name&gt;</tt>, the compiler enables the following subsets of these features by default:</p>
+<div>
+<table><tbody>
+<tr>
+<th><tt>-march=&lt;name&gt;</tt> option</th>
+<th>Features enabled</th>
+</tr>
+<tr>
+<td><tt>armv9.5-a</tt></td>
+<td>FEAT_ATS1A, FEAT_CPA, FEAT_E3DSE, FEAT_FAMINMAX, FEAT_FGWTE3, FEAT_FP8, FEAT_FP8DOT4, FEAT_FP8FMA, FEAT_FPMR, FEAT_HACDBS, FEAT_HDBSS, FEAT_LUT, FEAT_STEP2</td>
+</tr>
+<tr>
+<td><tt>armv9.4-a</tt></td>
+<td>FEAT_ATS1A</td>
+</tr>
+<tr>
+<td><tt>armv8.9-a</tt></td>
+<td>FEAT_ATS1A</td>
+</tr>
+</tbody></table>
+</div>
+<p>For more information, refer to:</p>
+<ul>
+<li>The <em>-march</em> section of the <em>Reference Guide</em>.</li>
+<li>The <em>-mbranch-protection</em> section of the <em>Reference Guide</em>.</li>
+<li>The <em>-mcpu</em> section of the <em>Reference Guide</em>.</li>
+<li>The relevant <em>Arm Architecture Reference Manual</em> or <em>Reference Manual Supplement</em> for each feature.</li>
+</ul>
+<p></p></li>
+<li><p>[SDCOMP-63881]  The Arm C library Default Initialization Sequence in the standardlib variants of the Arm C Library now restricts the scatter-loading mechanism to using only the contents of the Region Table.</p></li>
+<li><p>[SDCOMP-63875]  Support has been added for file paths longer than 260 characters, known as long paths, on Windows host platforms.</p></li>
+<li><p>[SDCOMP-63862]  Support has been added for return address signing hardening for AArch64 state as a mitigation for the PACMAN vulnerability.
+
+</p><p>For more information, refer to the following:</p>
+<ul>
+<li>The <em>-mharden-pac-ret</em> section of the <em>Reference Guide</em>.</li>
+<li>The <em>__attribute__((target("options"))) function attribute</em> section of the <em>Reference Guide</em>.</li>
+<li>The <em>Security features supported in Arm Compiler for Embedded</em> section of the <em>User Guide</em>.</li>
+<li>The <em>PACMAN security vulnerability</em> article, available at <a href="https://developer.arm.com/documentation/ka005109/latest">https://developer.arm.com/documentation/ka005109/latest</a>.</li>
+</ul>
+<p></p></li>
+<li><p>[SDCOMP-63846]  Support has been added for the Cortex-A520 processor. To target Cortex-A520, select from the following <tt>armclang</tt> options:
+</p><div>
+<table><tbody>
+<tr>
+<th>Cryptographic Extension</th>
+<th>Options</th>
+</tr>
+<tr>
+<td>Included</td>
+<td><tt>--target=aarch64-arm-none-eabi</tt> <tt>-mcpu=cortex-a520</tt></td>
+</tr>
+<tr>
+<td>Not included</td>
+<td><tt>--target=aarch64-arm-none-eabi</tt> <tt>-mcpu=cortex-a520+nocrypto</tt></td>
+</tr>
+</tbody></table>
+</div>
+<p></p></li>
+<li><p>[SDCOMP-63845]  Support has been added for the Cortex-X4 processor. To target Cortex-X4, select from the following <tt>armclang</tt> options:
+</p><div>
+<table><tbody>
+<tr>
+<th>Cryptographic Extension</th>
+<th>Options</th>
+</tr>
+<tr>
+<td>Included</td>
+<td><tt>--target=aarch64-arm-none-eabi</tt> <tt>-mcpu=cortex-x4</tt></td>
+</tr>
+<tr>
+<td>Not included</td>
+<td><tt>--target=aarch64-arm-none-eabi</tt> <tt>-mcpu=cortex-x4+nocrypto</tt></td>
+</tr>
+</tbody></table>
+</div>
+<p></p></li>
+<li><p>[SDCOMP-63839]  Support has been added for the Cortex-A720 processor. To target Cortex-A720, select from the following <tt>armclang</tt> options:
+</p><div>
+<table><tbody>
+<tr>
+<th>Cryptographic Extension</th>
+<th>Options</th>
+</tr>
+<tr>
+<td>Included</td>
+<td><tt>--target=aarch64-arm-none-eabi</tt> <tt>-mcpu=cortex-a720</tt></td>
+</tr>
+<tr>
+<td>Not included</td>
+<td><tt>--target=aarch64-arm-none-eabi</tt> <tt>-mcpu=cortex-a720+nocrypto</tt></td>
+</tr>
+</tbody></table>
+</div>
+<p></p></li>
+<li><p>[SDCOMP-63703]  Support has been added for execute-only memory (XOM) regions when building for an Armv6-M target. Select from the following options:
+
+</p><p><tt>armclang</tt>:</p>
+<ul>
+<li><tt>-mexecute-only</tt> to generate execute-only code.</li>
+</ul>
+<p><tt>armlink</tt>:</p>
+<ul>
+<li><tt>--scatter=&lt;filename&gt;</tt> and the <tt>+XO</tt> selector to place execute-only code using a scatter-file.</li>
+<li><tt>--xo_base=&lt;address&gt;</tt> to specify the base address of an execute-only execution region.</li>
+</ul>
+<p>For more information, refer to the following sections of the <em>Reference Guide</em>:</p>
+<ul>
+<li><em>-mexecute-only</em></li>
+<li><em>--scatter=filename</em></li>
+<li><em>--xo_base=address</em></li>
+<li><em>Syntax of an input section description</em></li>
+</ul>
+<p></p></li>
+<li><p>[SDCOMP-63682]  Previously, when compiling with Link-Time Optimization (LTO) enabled, the compiler generated an ELF section named <tt>.llvmbc</tt> for LLVM bitcode. This behavior has been changed. The compiler now generates an ELF section named <tt>.llvm.lto</tt>.</p></li>
+<li><p>[SDCOMP-63636]  Support has been added for the function sanitizer. To use the function sanitizer, compile with <tt>-fsanitize=function</tt>.
+
+</p><p>For more information, refer to the <em>-fsanitize, -fno-sanitize</em> section of the <em>Reference Guide</em>.</p><p></p></li>
+<li><p>[SDCOMP-63605]  Support has been added for the <tt>-nobuiltininc</tt> option.
+
+</p><p>For information, refer to the following:</p>
+<ul>
+<li>The <em>-nobuiltininc</em> section of the <em>Reference Guide</em>.</li>
+<li>The <em>Avoid linking in the Arm C library</em> section of the <em>User Guide</em>.</li>
+</ul>
+<p></p></li>
+<li><p>[SDCOMP-63376]  Support has been added for Arm C Language Extensions (ACLE) intrinsics for the Additional support for Release Consistency Model feature (FEAT_LRCPC3) for AArch64 state. To target a device with FEAT_LRCPC3, compile with an <tt>-march</tt> or <tt>-mcpu</tt> option that specifies <tt>+rcpc3</tt>.</p></li>
+<li><p>[SDCOMP-63068]  Installation on non-English Windows host platforms could incorrectly fail with the following error:
+</p><ul>
+<li><tt>An</tt> <tt>error</tt> <tt>occurred</tt> <tt>while</tt> <tt>applying</tt> <tt>security</tt> <tt>settings.</tt> <tt>NT</tt> <tt>AUTHORITY\Authenticated</tt> <tt>Users</tt> <tt>is</tt> <tt>not</tt> <tt>a</tt> <tt>valid</tt> <tt>user</tt> <tt>or</tt> <tt>group.</tt></li>
+</ul>
+<p>This has been fixed.</p><p></p></li>
+<li><p>[SDCOMP-62927]  Support has been added for the Straight-Line Speculation hardening option <tt>-mharden-sls=&lt;option&gt;</tt> for AArch64 state.
+
+</p><p>For more information, refer to the following:</p>
+<ul>
+<li>The <em>-mharden-sls</em> section of the <em>Reference Guide</em>.</li>
+<li>The <em>Overview of Straight-Line Speculation hardening</em> section of the <em>User Guide</em>.</li>
+<li>The <em>Straight-Line Speculation Whitepaper</em>, available at <a href="https://developer.arm.com/documentation/102825/latest">https://developer.arm.com/documentation/102825/latest</a>.</li>
+</ul>
+<p></p></li>
+</ul>
+<p></p></p><h4>Defect fixes in Arm Compiler for Embedded 6.21</h4><h5>armclang</h5><p><p>
+</p><ul>
+<li><p>[SDCOMP-63927]  When compiling with <tt>-fsanitize=memtag-stack</tt> for AArch64 state, and for a target that supports the Memory Tagging Extension (FEAT_MTE), the compiler could generate incorrect code. This has been fixed.</p></li>
+<li><p>[SDCOMP-63917]  When assembling for AArch64 state, the inline assembler and integrated assembler incorrectly failed to report an error for a <tt>FMLAL</tt> (by element) or <tt>FMLAL2</tt> (by element) instruction that specifies an invalid second source register of the form <tt>&lt;Vm&gt;.H[&lt;index&gt;]</tt>. This has been fixed. The inline assembler and integrated assembler now report the following error:
+</p><ul>
+<li><tt>invalid</tt> <tt>operand</tt> <tt>for</tt> <tt>instruction</tt></li>
+</ul>
+<p></p></li>
+<li><p>[SDCOMP-63834]  When assembling for AArch32 state, the inline assembler and integrated assembler incorrectly reported one of the following errors for a <tt>VMOV</tt> (general-purpose register to scalar) instruction that does not specify the data size, or a <tt>VMOV</tt> (scalar to general-purpose register) instruction that does not specify the data type:
+</p><ul>
+<li><tt>invalid</tt> <tt>instruction</tt></li>
+<li><tt>operand</tt> <tt>must</tt> <tt>be</tt> <tt>a</tt> <tt>register</tt> <tt>in</tt> <tt>range</tt> <tt>[r0,</tt> <tt>r15]</tt></li>
+</ul>
+<p>This has been fixed.</p><p></p></li>
+<li><p>[SDCOMP-63761]  When compiling for AArch64 state, and for the general dynamic thread local storage (TLS) model, the compiler could generate incorrect code for a function that accesses a <tt>__thread</tt> or <tt>thread_local</tt> variable. This has been fixed.</p></li>
+<li><p>[SDCOMP-63752]  When compiling for AArch64 state, and for a target that supports the floating-point half-precision multiplication instructions feature (FEAT_FHM), the compiler could generate incorrect code for a <tt>vfmlalq_laneq_high_f16()</tt> or <tt>vfmlalq_laneq_low_f16()</tt> Neon intrinsic. This has been fixed.</p></li>
+<li><p>[SDCOMP-63688]  When compiling with the stack protection feature enabled, and for an Armv6-M target or an Armv8-M target without the Main Extension, the compiler could generate incorrect code that corrupts register <tt>R4</tt>. This has been fixed.</p></li>
+<li><p>[SDCOMP-63685]  When compiling with <tt>-fsanitize=cfi</tt> and an <tt>-mbranch-protection=&lt;protection&gt;</tt> option that enables Branch Target Identification (BTI), and for an Armv8.1-M target with the Main Extension, the compiler could generate incorrect code for an indirect function call. This has been fixed.</p></li>
+<li><p>[SDCOMP-63454]  When compiling for a big-endian target and T32 state, the compiler could generate incorrect code for a PC-relative <tt>ADR</tt> instruction or a load literal instruction that refers to a symbol in a different ELF section than the instruction. This has been fixed.</p></li>
+<li><p>[SDCOMP-63077]  When compiling for AArch32 state, and the code contains an inline assembly statement that uses a <tt>t</tt> or <tt>w</tt> register constraint for a half-precision floating-point value of <tt>__bf16</tt> type, the inline assembler either generated incorrect code or incorrectly reported the following fatal error:
+</p><ul>
+<li><tt>error</tt> <tt>in</tt> <tt>backend:</tt> <tt>Cannot</tt> <tt>select:</tt> <tt>&lt;value&gt;:</tt> <tt>bf16</tt> <tt>=</tt> <tt>bitcast</tt> <tt>&lt;value&gt;</tt></li>
+</ul>
+<p>This has been fixed.</p><p></p></li>
+<li><p>[SDCOMP-62932]  The compiler could generate incorrect debug information for a C++ structured binding to a bit-field member <tt>B</tt> of a <b><tt>struct</tt></b>. This has been fixed. Additionally, the compiler now only generates debug information for <tt>B</tt> when <tt>B</tt> is aligned to an 8-bit boundary, and the size of <tt>B</tt> is 8, 16, 32, or 64 bits.</p></li>
+<li><p>[SDCOMP-62899]  When compiling with a <tt>-mbranch-protection=&lt;protection&gt;</tt> option that enables Branch Target Identification (BTI) protection, without the <tt>-fno-jump-tables</tt> [COMMUNITY] option, and for an Armv8-M target with the Main Extension, the compiler could generate code that incorrectly fails to perform a range check based on the controlling expression of a <b><tt>switch</tt></b> statement. This has been fixed.</p></li>
+<li><p>[SDCOMP-62792]  When compiling with <tt>-mbranch-protection=&lt;protection&gt;+leaf</tt>, and for an Armv8-M target with the Main Extension, the compiler could generate incorrect code for functions that do not save the Link Register (LR) on the stack. This has been fixed.</p></li>
+<li><p>[SDCOMP-62791]  When compiling for AArch32 state, at any optimization level except <tt>-O0</tt>, with <tt>-mfloat-abi=hard</tt>, and for a target with half-precision floating-point support, the compiler could generate code that incorrectly does not preserve the half-precision floating-point value returned by one function when making a call to another function. This has been fixed.</p></li>
+<li><p>[SDCOMP-62781]  When compiling with <tt>-mexecute-only</tt> and <tt>-mfloat-abi=hard</tt> for a target that includes only MVE integer support, the compiler could incorrectly report the following fatal error:
+</p><ul>
+<li><tt>error</tt> <tt>in</tt> <tt>backend:</tt> <tt>Cannot</tt> <tt>select:</tt> <tt>&lt;value&gt;:</tt> <tt>f32</tt></li>
+</ul>
+<p>This has been fixed.</p><p></p></li>
+<li><p>[SDCOMP-62661]  When compiling for AArch64 state, the compiler could generate incorrect code for a call to a variadic function. This has been fixed.</p></li>
+<li><p>[SDCOMP-62354]  When compiling with <tt>-fsanitize=memtag-heap</tt> or <tt>-fsanitize=memtag-stack</tt> for AArch64 state, and for a target that supports the Memory Tagging Extension (FEAT_MTE), the compiler could generate incorrect code. This has been fixed.</p></li>
+<li><p>[SDCOMP-62234]  The compiler incorrectly failed to report a warning for an invalid <tt>#undef</tt> preprocessor macro which specifies a name that is lexically identical to a predefined macro name as listed in the <em>Predefined macro names</em> section of the relevant C standard specification. This has been fixed. The compiler now reports the following warning:
+</p><ul>
+<li><tt>undefining</tt> <tt>builtin</tt> <tt>macro</tt></li>
+</ul>
+<p></p></li>
+<li><p>[SDCOMP-62221]  When compiling for an Armv6-M target, the compiler could incorrectly generate a <tt>B.W</tt> instruction. This has been fixed.</p></li>
+<li><p>[SDCOMP-61467]  When compiling at any optimization level except <tt>-O0</tt>, the compiler could generate code that incorrectly flushed a half-precision floating-point denormal value to zero. This has been fixed. The compiler assumes that flushing half-precision floating-point denormal values to zero is always disabled.</p></li>
+<li><p>[SDCOMP-61089]  When compiling with <tt>-mfloat-abi=hard</tt> for AArch32 state, and for a target that does not support hardware floating-point instructions, the compiler incorrectly failed to report a warning. This has been fixed. The compiler now reports the following warning:
+</p><ul>
+<li><tt>'-mfloat-abi=hard':</tt> <tt>selected</tt> <tt>processor</tt> <tt>lacks</tt> <tt>floating</tt> <tt>point</tt> <tt>registers</tt></li>
+</ul>
+<p></p></li>
+<li><p>[SDCOMP-59190]  When compiling in a C++ source language mode, the compiler could incorrectly fail to report an error for an ambiguous reference. This has been fixed. The compiler now reports the following error:
+</p><ul>
+<li><tt>reference</tt> <tt>to</tt> <tt>'&lt;name&gt;'</tt> <tt>is</tt> <tt>ambiguous</tt></li>
+</ul>
+<p></p></li>
+<li><p>[SDCOMP-54425]  When assembling for an Armv7-M target or an Armv8-M target with the Main Extension, the inline assembler and integrated assembler could incorrectly report the following error for a <tt>LDRB</tt>, <tt>LDRH</tt>, <tt>LDRSB</tt>, <tt>LDRSH</tt>, <tt>STRB</tt>, or <tt>STRH</tt> instruction that has a <tt>.W</tt> suffix:
+</p><ul>
+<li><tt>too</tt> <tt>many</tt> <tt>operands</tt> <tt>for</tt> <tt>instruction</tt></li>
+</ul>
+<p>This has been fixed.</p><p></p></li>
+</ul>
+<p></p></p><h5>armlink</h5><p><p>
+</p><ul>
+<li><p>[SDCOMP-63470]  When linking an input object that has been compiled with <tt>-mcmodel=tiny</tt> and for AArch64 state, the linker could incorrectly report the following:
+</p><ul>
+<li><tt>Internal</tt> <tt>fault:</tt> <tt>[0xa6e935:&lt;ver&gt;]</tt></li>
+</ul>
+<p>This has been fixed.</p><p></p></li>
+<li><p>[SDCOMP-62796]  When linking an input object that contains DWARF 5 debug information and a <tt>.debug_line_str</tt> section, the linker generated an image which incorrectly did not contain that section. This has been fixed.</p></li>
+<li><p>[SDCOMP-62732]  When linking without <tt>--no_merge</tt>, the linker could generate incorrect debug information for a merged string. This has been fixed.</p></li>
+<li><p>[SDCOMP-60627]  When linking an input object that has been compiled in a C++ source language mode and with Link-Time Optimization (LTO) enabled, the linker could incorrectly report the following error:
+</p><ul>
+<li><tt>L6654E:</tt> <tt>Rejected</tt> <tt>Local</tt> <tt>symbol</tt> <tt>[Anonymous</tt> <tt>Symbol]</tt> <tt>referred</tt> <tt>to</tt> <tt>from</tt> <tt>non</tt> <tt>group</tt> <tt>member</tt> <tt>&lt;object&gt;(&lt;section&gt;)</tt></li>
+</ul>
+<p>This has been fixed.</p><p></p></li>
+<li><p>[SDCOMP-59938]  When linking for AArch64 state, the output for the following linker options incorrectly failed to account for calls to <b><tt>static</tt></b> functions:
+</p><ul>
+<li><tt>--callgraph</tt></li>
+<li><tt>--info=stack</tt></li>
+<li><tt>--info=summarystack</tt></li>
+</ul>
+<p>This has been fixed.</p><p></p></li>
+</ul>
+<p></p></p><h5>fromelf</h5><p><p>
+</p><ul>
+<li><p>[SDCOMP-63738]  The <tt>fromelf</tt> utility incorrectly disassembled the label operand of a <tt>WLS</tt> or <tt>WLSTP</tt> instruction as an immediate offset instead of a PC-relative offset. This has been fixed.</p></li>
+<li><p>[SDCOMP-63683]  When processing an ELF format input file with <tt>-g</tt>, and the input file has been built for AArch64 state with Pointer Authentication Code (PAC) branch protection enabled, the <tt>fromelf</tt> utility incorrectly reported <tt>unknown</tt> <tt>(45)</tt> instead of <tt>DW_CFA_AARCH64_negate_ra_state</tt> in call frame debug information. This has been fixed.</p></li>
+<li><p>[SDCOMP-63390]  When processing an ELF format input file that contains debug information with <tt>-g</tt>, the <tt>fromelf</tt> utility decoded certain DWARF attributes of the form <tt>DW_AT_*</tt> incorrectly. This has been fixed.</p></li>
+</ul>
+<p></p></p><h5>Libraries and system headers</h5><p><p>
+</p><ul>
+<li><p>[SDCOMP-62756]  The Arm C library implementation of the <tt>memmove()</tt> function for AArch64 state could incorrectly corrupt memory when copying at least 4GB. This has been fixed.</p></li>
+</ul>
+<p></p></p>
+</div></body> </html>
